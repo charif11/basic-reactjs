@@ -1,0 +1,40 @@
+.cal{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 2px #ECDFCC;
+    padding: 1rem;
+}
+.cal hr{
+    margin: 1rem 0;
+}
+.cal .btn button{
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: aqua;
+    border-radius: 1rem;
+    color: black;
+    margin:0.5rem 0.5rem 0;
+}
+.table{
+    display: flex;
+    justify-content: center;
+}
+
+.table table{
+    background-color: aliceblue;
+    width: 50%;
+}
+
+.btn-ref{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background-color: aqua;
+    border-radius: 1rem;
+    font-weight: bolder;
+    color: black;
+    border: 0;
+    margin: 0.25rem 0.5rem;
+}

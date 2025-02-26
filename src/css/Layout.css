@@ -1,0 +1,29 @@
+.container h2 {
+    color: blue;
+    text-align: center;
+}
+
+.container ul {
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-evenly;
+}
+
+.container ul li {
+    text-align: center;
+    list-style: decimal;
+}
+
+.container .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 40vh;
+}
+
+.container .img img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}

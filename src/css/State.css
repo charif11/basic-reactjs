@@ -1,0 +1,4 @@
+#input:focus{
+    outline-offset: 3px;
+    outline: 1px solid blueviolet;
+}
