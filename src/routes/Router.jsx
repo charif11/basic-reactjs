@@ -7,6 +7,8 @@ import State from "../pages/State";
 import Login from "../pages/Login";
 import Form from "../pages/Form";
 import Register from "../pages/Register";
+import CheckboxRadioSwitch from "../pages/CheckboxRadioSwitch";
+import SelectFileForm from "../pages/SelectFileForm";
 
 export default function AppRouter() {
   return (
@@ -22,6 +24,8 @@ export default function AppRouter() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/form" element={<Form />} />
+      <Route path="/crs" element={<CheckboxRadioSwitch />} />
+      <Route path="/sf" element={<SelectFileForm />} />
       <Route path="/404" element={<NoPage />} />
     </Routes>
   );

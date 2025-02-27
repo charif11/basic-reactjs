@@ -7,9 +7,14 @@ export default function Navbar() {
       <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
           <NavLink className="navbar-brand" to="/">
-          <img src="./logo.png" alt="" width="30" height="30" class="position-absolute"
-          />
-          <span style={{marginLeft:'2.25rem'}}>Basic ReactJS</span>
+            <img
+              src="./logo.png"
+              alt=""
+              width="30"
+              height="30"
+              class="position-absolute"
+            />
+            <span style={{ marginLeft: "2.25rem" }}>Basic ReactJS</span>
           </NavLink>
           <button
             class="navbar-toggler"
@@ -25,13 +30,18 @@ export default function Navbar() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-pills me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <NavLink to='/' className="nav-link ps-2">
+                <NavLink to="/" className="nav-link ps-2">
                   Home
                 </NavLink>
               </li>
               <li class="nav-item">
                 <NavLink className="nav-link ps-2" to="/ref">
                   Ref
+                </NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink className="nav-link ps-2" to="/state">
+                  State
                 </NavLink>
               </li>
               <li class="nav-item dropdown">
@@ -43,31 +53,39 @@ export default function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  Form
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <NavLink className="dropdown-item" to="/state">
-                      State
+                    <NavLink className="dropdown-item" to="/form">
+                      Form
                     </NavLink>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/form">
-                      Form
+                    <NavLink className="dropdown-item" to="/crs">
+                      Checkbox,Radio,Switch
+                    </NavLink>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/sf">
+                      Select File
                     </NavLink>
                   </li>
                 </ul>
               </li>
             </ul>
-              <NavLink to="/login" className="btn btn-outline-success">
-                Login
-              </NavLink>
-              <NavLink to="/register" className="btn btn-success ms-2">
-                Register
-              </NavLink>
+            <NavLink to="/login" className="btn btn-outline-success">
+              Login
+            </NavLink>
+            <NavLink to="/register" className="btn btn-success ms-2">
+              Register
+            </NavLink>
           </div>
         </div>
       </nav>

@@ -31,16 +31,16 @@ function Home() {
         ))}
       </div>
       <img
-        class="img-fluid"
+        className="img-fluid"
         src="https://4kwallpapers.com/images/walls/thumbs_3t/21085.jpg"
         alt=""
       />
-      <div class="row g-2 mt-1">
-        <div class="col">
-          <img class="img-fluid" style={img} src="./login.jpeg" alt="" />
+      <div className="row g-2 mt-1">
+        <div className="col">
+          <img className="img-fluid" style={img} src="./login.jpeg" alt="" />
         </div>
-        <div class="col">
-          <img class="img-fluid" style={img} src={img2} alt="" />
+        <div className="col">
+          <img className="img-fluid" style={img} src={img2} alt="" />
         </div>
       </div>
     </div>
