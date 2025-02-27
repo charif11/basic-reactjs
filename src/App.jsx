@@ -5,12 +5,12 @@ import "./App.css";
 export default function App() {
   return (
     // ใช้อัพโหลดลง github เฉพาะหน้าเว็ปโดยไม่เชื่อมฐานข้อมูล
-    // <HashRouter>
-    //   <AppRouter />
-    // </HashRouter>
-
-    <BrowserRouter>
+    <HashRouter>
       <AppRouter />
-    </BrowserRouter>
+    </HashRouter>
+
+    // <BrowserRouter>
+    //   <AppRouter />
+    // </BrowserRouter>
   );
 }
