@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
             <img
-              src="../logo.png"
+              src="./logo.png"
               alt=""
               width="30"
               height="30"
