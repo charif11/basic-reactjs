@@ -22,7 +22,10 @@ function CheckboxRadioSwitch() {
 
   const onClickButton = (event) => {
     if (switchReq.current.checked) {
-      if (checkedStyles.length === 0) {
+      if (checkedStyles.length === 0 && checkedSize === "") {
+        alert("Please select color and size");
+        return;
+      } else if (checkedStyles.length === 0) {
         alert("Please select color");
         return;
       } else if (checkedSize === "") {
@@ -37,22 +40,22 @@ function CheckboxRadioSwitch() {
 
   return (
     <div
-      className="container-sm shadow-lg rounded-4 p-4 position-absolute bg-info"
-      style={{ top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
+      className="shadow-lg rounded-4 p-4 position-absolute bg-info"
+      style={{width:'80%', top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
     >
       <h2 className="text-center fw-bold fs-1 mb-3">
         Checkbox Radio Switch Form
       </h2>
-      <form className="w-75" style={{margin:'0 auto'}}>
+      <form className="w-75" style={{ margin: "0 auto" }}>
         <span className="fs-4 me-4">Color</span>
         {styles.map((cl, i) => {
           return (
-            <div className="form-check form-check-inline">
+            <div className="form-check form-check-inline" key={i}>
               <input
                 className="form-check-input"
                 type="checkbox"
                 value={cl}
-                id="{'check'+i}"
+                id={`check${i}`} 
                 onChange={onChangeCheckbox}
               />
               <label className="form-check-label" htmlFor="{'check'+i}">
@@ -65,13 +68,13 @@ function CheckboxRadioSwitch() {
         <span className="fs-4 me-4">Size</span>
         {sizes.map((sz, i) => {
           return (
-            <div className="form-check form-check-inline">
+            <div className="form-check form-check-inline" key={i}>
               <input
                 className="form-check-input"
                 type="radio"
                 value={sz}
                 name="size"
-                id="{'radio'+i}"
+                id={`check${i}`} 
                 onChange={onChangeRadio}
               />
               <label className="form-check-label" htmlFor="{'radio'+i}">
@@ -94,7 +97,11 @@ function CheckboxRadioSwitch() {
           </label>
         </div>
         <div className="text-center mt-4">
-          <button type="button" onClick={onClickButton} className="px-4 btn btn-warning btn-lg">
+          <button
+            type="button"
+            onClick={onClickButton}
+            className="px-4 btn btn-warning btn-lg"
+          >
             OK
           </button>
         </div>

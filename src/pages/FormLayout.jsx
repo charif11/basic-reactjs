@@ -1,21 +1,19 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import '../css/Layout.css'
 
-function Layout() {
+function FormLayout() {
   return (
     <div className="bg-secondary">
       <Navbar />
-      <div className="container p-4 shadow-lg bg-light"
-      style={{minHeight:'88.1vh'}}
+      <div
+        className="container p-4 shadow-lg bg-light position-relative"
+        style={{ minHeight: "94.1vh" }}
       >
         <Outlet />
       </div>
-      <Footer name="charif" />
     </div>
   );
 }
 
-export default Layout;
+export default FormLayout;

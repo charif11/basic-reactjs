@@ -4,20 +4,20 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
-      <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container-fluid">
+      <nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light sticky-top">
+        <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
             <img
-              src="./logo.png"
+              src="/logo.png"
               alt=""
               width="30"
               height="30"
-              class="position-absolute"
+              className="position-absolute"
             />
             <span style={{ marginLeft: "2.25rem" }}>Basic ReactJS</span>
           </NavLink>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -25,29 +25,29 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-pills me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav nav-pills me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
                 <NavLink to="/" className="nav-link ps-2">
                   Home
                 </NavLink>
               </li>
-              <li class="nav-item">
-                <NavLink className="nav-link ps-2" to="/ref">
+              <li className="nav-item">
+                <NavLink className="nav-link ps-2" to="/ref?keyword=React&page=5">
                   Ref
                 </NavLink>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <NavLink className="nav-link ps-2" to="/state">
                   State
                 </NavLink>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle ps-2"
-                  to="#"
+                  className="nav-link dropdown-toggle ps-2"
+                  href="#"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -55,26 +55,34 @@ export default function Navbar() {
                 >
                   Form
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <NavLink className="dropdown-item" to="/form">
+                    <NavLink className="dropdown-item" to="/form" end>
                       Form
                     </NavLink>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/crs">
+                    <NavLink className="dropdown-item" to="/form/checkbox-radio-switch">
                       Checkbox,Radio,Switch
                     </NavLink>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/sf">
+                    <NavLink className="dropdown-item" to="/form/select-file">
                       Select File
+                    </NavLink>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/form/form-validation">
+                      Form Validation
                     </NavLink>
                   </li>
                 </ul>

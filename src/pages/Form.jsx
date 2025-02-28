@@ -11,7 +11,7 @@ function Form() {
     let pswd = textPswd.current.value;
     if (pswd !== "" && !pswd.match(/^[0-9a-zA-Z]+$/)) {
       textPswd.current.value = "";
-      setErrPwd("ต้องเป็น 0-9 หรือ a-z หรือ A-Z เท่านั้น");
+      setErrPwd("ต้องเป็น 0-9 a-z A-Z เท่านั้น");
     } else {
       setErrPwd("");
     }
@@ -27,8 +27,8 @@ function Form() {
 
   return (
     <div
-      className="container-sm shadow-lg rounded-4 p-4 position-absolute"
-      style={{ top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
+      className="shadow-lg rounded-4 p-4 position-absolute"
+      style={{width:'80%', top: "50%", left: "50%", transform: "translate(-50%,-50%)" }}
     >
       <h2 className="text-center fw-bold fs-1 text-primary">Form</h2>
       <form>
@@ -78,9 +78,6 @@ function Form() {
         </div>
 
         <div className="input-group mb-3">
-          <span className="input-group-text" id="basic-addon1">
-            {/* <LockKeyhole size={20} /> */}
-          </span>
           <label className="input-group-text" htmlFor="memo">
             description
           </label>
@@ -91,8 +88,21 @@ function Form() {
             aria-describedby="basic-addon1"
           />
         </div>
+
+        <div className="form-group mb-3">
+          <label htmlFor="birthday" className="form-label mb-0">
+            Birthday
+          </label>
+          <input
+            type="date"
+            id="birthday"
+            className="form-control form-control-sm"
+            onChange={e=>console.log(e.target.value)}
+          />
+        </div>
+
         <div className="d-grid mx-5">
-          <button className="btn btn-primary" type="button">
+          <button className="btn btn-primary mt-2" type="button">
             Submit
           </button>
         </div>
